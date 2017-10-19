@@ -27,6 +27,11 @@ class SignUp extends React.Component {
     this.onSignUp = this.onSignUp.bind(this);
   }
 
+  static navigationOptions = ({navigation}) => ({
+    title: 'Sign Up'
+  });
+
+
   onSignUp() {
     // let {dispatch, fields: {email, password}} = this.props;
     console.log(this.state);

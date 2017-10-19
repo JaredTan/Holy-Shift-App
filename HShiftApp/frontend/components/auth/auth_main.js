@@ -7,6 +7,13 @@ import {
   NavigatorIOS
 } from 'react-native';
 import LogInNavigator from './login_navigator';
+import SignUp from './signup';
+import {StackNavigator} from 'react-navigation';
+
+const MainNav = StackNavigator({
+  LogIn: {screen: LogInNavigator},
+  SignUp: {screen: SignUp}
+});
 
 class AuthMain extends React.Component {
   constructor(props) {
@@ -14,15 +21,10 @@ class AuthMain extends React.Component {
 
   }
 
+
   render() {
     return (
-      <NavigatorIOS
-        initialRoute={{
-          component: LogInNavigator,
-          title: 'Log In',
-          navigationBarHidden: true
-        }}
-        style={{flex: 1}}/>
+      <MainNav/>
     );
   }
 

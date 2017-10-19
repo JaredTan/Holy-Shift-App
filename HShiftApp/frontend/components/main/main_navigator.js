@@ -18,7 +18,7 @@ import {
   StackNavigator,
 } from 'react-navigation';
 
-const BasicApp = StackNavigator({
+const MainNav = StackNavigator({
   Agenda: {screen: AgendaScreenContainer},
   Main: {screen: MainContainer},
   Team: {screen: TeamIndexContainer},
@@ -37,7 +37,7 @@ class MainNavigator extends React.Component {
   render() {
     return (
       <MenuContext>
-        <BasicApp/>
+        <MainNav/>
       </MenuContext>
     );
   }

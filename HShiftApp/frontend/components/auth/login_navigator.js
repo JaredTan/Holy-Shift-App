@@ -23,16 +23,17 @@ class LogInNavigator extends React.Component {
 
   }
 
+  static navigationOptions = ({navigation}) => ({
+    title: 'Log In'
+  });
+
   handleBack() {
     this.props.navigator.pop();
   }
 
   redirectToSignUp() {
-    this.props.navigator.push({
-      component: SignUpNavigator,
-      title: 'Sign Up Navigator',
-      navigationBarHidden: true
-    });
+    const { navigate } = this.props.navigation;
+    navigate('SignUp')
   }
 
   render() {
